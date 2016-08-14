@@ -9,7 +9,9 @@ DROP TABLE athletes;
 CREATE TABLE athletes(
 id serial4 PRIMARY KEY,
 first_name VARCHAR(255),
-last_name VARCHAR(255)
+last_name VARCHAR(255),
+gender VARCHAR(255),
+sport VARCHAR(255)
 );
 
 CREATE TABLE events(

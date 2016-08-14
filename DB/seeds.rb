@@ -1,20 +1,20 @@
 #database seed data will be stored in here
 
 require('pry-byebug')
-require_relative('../models/book.rb')
-require_relative('../models/member.rb')
-require_relative('../models/rental.rb')
+require_relative('../models/athlete.rb')
+require_relative('../models/event.rb')
+require_relative('../models/nation.rb')
 
-Rental.delete_all()
-Book.delete_all()
-Member.delete_all()
+Athlete.delete_all()
+Event.delete_all()
+Nation.delete_all()
 
 
-book1 = Book.new({ 'title' => 'Eating people is wrong', 'author' => 'Malcolm Bradbury'})
-book2 = Book.new({ 'title' => 'How to avoid huge ships', 'author' => 'Cpt. John W. Trimmer'})
-book3 = Book.new({ 'title' => 'Everything I want to do is illegal', 'author' => 'Joel Salatin'})
-book4 = Book.new({ 'title' => 'Old tractors and the men who love them', 'author' => 'Roger Welsh'})
-book5 = Book.new({ 'title' => 'The practical pyromaniac', 'author' => 'William Gurstelle'})
+athlete1 = Athlete.new({ 'first_name' => 'Usian', 'lastname' => 'Bolt', 'gender' => 'male',  'sport'=>'100m Sprint'})
+athlete2 = Athlete.new({ 'first_name' => 'Andrew', 'lastname' => 'Buchart', 'gender' => 'male', 'sport'=>'Athletics 5000m'})
+athlete3 = Athlete.new({ 'first_name' => 'Adam', 'lastname' => 'Gemili', 'gender' => 'male', 'sport'=>'Athletics 200m'})
+athlete4 = Athlete.new({ 'first_name' => 'Usian', 'lastname' => 'Bolt', 'gender' => 'male', 'sport'=>'100m Sprint'})
+athlete5 = Athlete.new({ 'first_name' => 'Usian', 'lastname' => 'Bolt', 'gender' => 'male', 'sport'=>'100m Sprint'})
 
 book1.save
 book2.save
