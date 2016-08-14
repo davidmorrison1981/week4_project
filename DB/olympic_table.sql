@@ -1,3 +1,6 @@
+#drop tables then create tables for athletes, 
+#nations, events and participation
+
 DROP TABLE participation;
 DROP TABLE events;
 DROP TABLE nations;
@@ -5,7 +8,8 @@ DROP TABLE athletes;
 
 CREATE TABLE athletes(
 id serial4 PRIMARY KEY,
-name VARCHAR(255)
+first_name VARCHAR(255),
+last_name VARCHAR(255)
 );
 
 CREATE TABLE events(
