@@ -3,8 +3,8 @@
 #develop CRUD functions within class
 require('pg')
 require_relative('../db/sql_runner')
-require_relative('./nations.rb')
-require_relative('./events.rb')
+require_relative('./nation.rb')
+require_relative('./event.rb')
 
 class Athlete
 

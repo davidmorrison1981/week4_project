@@ -15,6 +15,9 @@ last_name VARCHAR(255)
 CREATE TABLE events(
 id serial4 PRIMARY KEY,
 sport VARCHAR(255),
+gold_id int4,
+silver_id int4,
+bronze_id int4,
 athlete_id int4 references athletes(id) ON DELETE CASCADE
 );
 
