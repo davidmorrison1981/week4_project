@@ -2,9 +2,6 @@
 #create class for event
 #develop CRUD functions within class
 
-#require related files
-#create class for athlete
-#develop CRUD functions within class
 require('pg')
 require_relative('../db/sql_runner')
 require_relative('./nation.rb')
