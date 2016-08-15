@@ -10,30 +10,29 @@ Event.delete_all()
 Nation.delete_all()
 
 
-athlete1 = Athlete.new({ 'first_name' => 'Usian', 'lastname' => 'Bolt', 'gender' => 'male',  'sport'=>'100m Sprint'})
-athlete2 = Athlete.new({ 'first_name' => 'Andrew', 'lastname' => 'Buchart', 'gender' => 'male', 'sport'=>'Athletics 5000m'})
-athlete3 = Athlete.new({ 'first_name' => 'Adam', 'lastname' => 'Gemili', 'gender' => 'male', 'sport'=>'Athletics 200m'})
-athlete4 = Athlete.new({ 'first_name' => 'Usian', 'lastname' => 'Bolt', 'gender' => 'male', 'sport'=>'100m Sprint'})
-athlete5 = Athlete.new({ 'first_name' => 'Usian', 'lastname' => 'Bolt', 'gender' => 'male', 'sport'=>'100m Sprint'})
+athlete1 = Athlete.new({ 'first_name' => 'Usian', 'lastname' => 'Bolt', 'gender' => 'male'})
+athlete2 = Athlete.new({ 'first_name' => 'Andrew', 'lastname' => 'Buchart', 'gender' => 'male'})
+athlete3 = Athlete.new({ 'first_name' => 'Adam', 'lastname' => 'Gemili', 'gender' => 'male'})
+athlete4 = Athlete.new({ 'first_name' => 'Andy', 'lastname' => 'Murray', 'gender' => 'male'})
+athlete5 = Athlete.new({ 'first_name' => 'Max', 'lastname' => 'Whitlock', 'gender' => 'male'})
 
-book1.save
-book2.save
-book3.save
-book4.save
-book5.save
+athlete1.save
+athlete2.save
+athlete3.save
+athlete4.save
+athlete5.save
 
 
-member1 = Member.new({ 'name' => 'Conan the Librarian', 'address' => 'Hyboria'})
-member2 = Member.new({ 'name' => 'Val Gibson/Dryden', 'address' => 'Kanto region'})
-member3 = Member.new({ 'name' => 'Antonio Eusebio De Abreu Goncalves', 'address' => 'Papa Tyno Authentic Italian Ristorante'})
-member4 = Member.new({ 'name' => 'Jay Chetty', 'address' => 'TableTennisLand'})
-member5 = Member.new({ 'name' => 'Zsolt Podoba-Szalai', 'address' => 'Nearest Chippie'})
+event1 = Event.new({ 'sport' => 'Gymnastics', 'gold_id' => 'athlete1.id', 'silver_id' => 'athlete2.id', 'bronze_id' => 'athlete3.id'})
+event2 = Event.new({ 'sport' => 'Tennis', 'gold_id' => 'athlete3.id', 'silver_id' => 'athlete4.id', 'bronze_id' => 'athlete5.id'})
+event3 = Event.new({ 'sport' => '100m Sprint', 'gold_id' => 'athlete1.id', 'silver_id' => 'athlete3.id', 'bronze_id' => 'athlete5.id'})
 
-member1.save
-member2.save
-member3.save
-member4.save
-member5.save
+
+event1.save
+event2.save
+event3.save
+event4.save
+event5.save
 
 
 rental1 = Rental.new({'book_id' => book1.id, 'member_id' => member1.id})
