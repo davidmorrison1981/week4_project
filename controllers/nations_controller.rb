@@ -1,4 +1,4 @@
-require_relative('../nations/event')
+require_relative('../models/nation')
 
 #index
 get '/nations' do
@@ -25,7 +25,7 @@ end
 post '/nations' do
   @nation = Nation.new(params)
   @nation.save
-  redirect to( "nations" )
+  redirect to( "/nations" )
 end
 
 #update

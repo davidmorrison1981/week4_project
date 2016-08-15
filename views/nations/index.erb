@@ -1,8 +1,8 @@
 <!-- html for the index page -->
 <div>
-<% @books.each do |book| %>
-  <a href="/books/<%= book.id  %>"><%= book.title %></a>  - By: <%= book.author %><br><hr>
+<% @nations.each do |nation| %>
+  <a href="/nations/<%= nation.id  %>"><%= nation.name %></a>  
 <% end %>
 
-<a href="/books/new">Add new book</a><br>
+<a href="/nations/new">Add new country</a><br>
 </div>

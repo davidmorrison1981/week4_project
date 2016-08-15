@@ -4,6 +4,7 @@ require('pry-byebug')
 require_relative('../models/athlete.rb')
 require_relative('../models/event.rb')
 require_relative('../models/nation.rb')
+#require_relative('../models/.rb')
 
 Athlete.delete_all()
 Event.delete_all()
@@ -69,43 +70,47 @@ event3 = Event.new({
 event1.save
 event2.save
 event3.save
-event4.save
-event5.save
 
-participation1 = Participation.new({
-    'event_id' => event1.id,
-    'athlete_id' => athlete1.id, 
-    'athlete_id' => athlete2.id, 
-    'athlete_id' => athlete3.id, 
-    'athlete_id' => athlete4.id, 
-    'athlete_id' => athlete5.id
-    })
+# participation1 = Participation.new({
+#     'event_id' => event1.id,
+#     'athlete1_id' => athlete1.id, 
+#     'athlete2_id' => athlete2.id, 
+#     'athlete3_id' => athlete3.id, 
+#     'athlete4_id' => athlete4.id, 
+#     'athlete5_id' => athlete5.id
+#     })
 
-participation2 = Participation.new({
-    'event_id' => event1.id,
-    'athlete_id' => athlete1.id, 
-    'athlete_id' => athlete4.id, 
-    'athlete_id' => athlete5.id
-    })
+# participation2 = Participation.new({
+#     'event_id' => event2.id,
+#     'athlete1_id' => athlete1.id, 
+#     'athlete2_id' => athlete4.id
+#     })
 
-participation3 = Participation.new({
-    'event_id' => event1.id,
-    'athlete_id' => athlete1.id, 
-    'athlete_id' => athlete2.id, 
-    'athlete_id' => athlete3.id
-    })
+# participation3 = Participation.new({
+#     'event_id' => event3.id,
+#     'athlete1_id' => athlete1.id, 
+#     'athlete2_id' => athlete2.id, 
+#     'athlete3_id' => athlete3.id,
+#     'athlete4_id' => athlete4.id
+#     })
 
-participation1.save
-participation2.save
-participation3.save
+# participation1.save
+# participation2.save
+# participation3.save
 
 nation1 = Nation.new({
-    'nation1' => 'Great Britain',
-    'nation2' => 'Jamaica',
-    'nation3' => 'Uganda'
-
+    'name' => 'Great Britain'
+  })
+nation2 = Nation.new({
+    'name' => 'Jamaica'
+  })
+nation3 = Nation.new({
+    'name' => 'Uganda'
   })
 
+nation1.save
+nation2.save
+nation3.save
 
 binding.pry
 nil

@@ -8,7 +8,7 @@ require_relative('./event.rb')
 
 class Athlete
 
-  attr_reader :id, :first_name, :last_name
+  attr_reader :id, :first_name, :last_name, :gender
 
   def initialize(options)
     @id = options['id'].to_i

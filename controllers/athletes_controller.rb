@@ -25,7 +25,7 @@ end
 post '/athletes' do
   @athlete = Athlete.new(params)
   @athlete.save
-  redirect to( "athletes" )
+  redirect to( "/athletes" )
 end
 
 #update

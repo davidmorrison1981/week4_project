@@ -9,15 +9,15 @@ require_relative('./athlete.rb')
 
 class Nation
 
-  attr_reader :id, :nation
+  attr_reader :id, :name
 
   def initialize(options)
     @id = options['id'].to_i
-    @nation = options['nation']
+    @name = options['name']
   end
 
   def save()
-    sql = "INSERT INTO nations (nation) VALUES ('#{@nation}') RETURNING *"
+    sql = "INSERT INTO nations (name) VALUES ('#{@name}') RETURNING *"
     event = SqlRunner.run(sql).first
     @id = event['id']
   end
@@ -43,7 +43,7 @@ class Nation
   end
   
   def self.map_items(sql)
-    event = SqlRunner.run(sql)
+    nation = SqlRunner.run(sql)
     result = nation.map { |n| Nation.new( n ) }
     return result
   end

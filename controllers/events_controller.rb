@@ -25,7 +25,7 @@ end
 post '/events' do
   @event = Event.new(params)
   @event.save
-  redirect to( "events" )
+  redirect to( "/events" )
 end
 
 #update

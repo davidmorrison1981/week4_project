@@ -1,6 +1,3 @@
-#drop tables then create tables for athletes, 
-#nations, events and participation
-
 DROP TABLE participation;
 DROP TABLE events;
 DROP TABLE nations;
@@ -24,7 +21,7 @@ athlete_id int4 references athletes(id) ON DELETE CASCADE
 
 CREATE TABLE nations(
 id serial4 PRIMARY KEY,
-country VARCHAR(255),
+name VARCHAR(255),
 athlete_id int4 references athletes(id) ON DELETE CASCADE
 );
 
