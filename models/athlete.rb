@@ -14,6 +14,11 @@ class Athlete
     @id = options['id'].to_i
     @first_name = options['first_name']
     @last_name = options['last_name']
+    @gender = options['gender']
+  end
+
+  def full_name(options)
+    return @first_name.concat(" #{@last_name}")
   end
 
   def save()
