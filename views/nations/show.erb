@@ -6,8 +6,9 @@
 <h4>Athletes:</h4>
 <ul>
   <% @nation.athletes.each do |athlete| %>
-  <li>Name: <%=athlete.full_name %> </li>
+  <li>Name: <a href= "/athletes/<%= athlete.id  %>"> <%=athlete.full_name %> </a></li>
   <% end %>
 </ul>
 
 </div>
+

@@ -1,9 +1,12 @@
 <!-- html for the show page page -->
-<h1>Athlete:</h1>
-<br>
 <div>
-  <a href="/athletes/<%= athlete.id  %>">Name: <%= athlete.full_name %></a> Gender: <%= athlete.gender %><br><hr>
-<% end %>
+<h1><%= @athlete.full_name %></h1>
 
-<a href="/athletes/new">Add new athlete</a><br>
+<h4>Events:</h4>
+<ul>
+  <% @athlete.events.each do |event| %>
+  <li>Name: <%=event.name %> </li>
+  <% end %>
+</ul>
+
 </div>

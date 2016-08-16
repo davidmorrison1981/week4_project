@@ -29,7 +29,7 @@ class Athlete
   end
 
   def events()
-    sql ="SELECT e.* FROM events e INNER JOIN participation p ON e.id = p.event_id WHERE p.athlete_id = #{@id}"
+    sql ="SELECT e.name FROM events e INNER JOIN participation p ON e.id = p.event_id WHERE p.athlete_id = #{@id}"
     return Event.map_items(sql)
   end
 
