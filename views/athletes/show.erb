@@ -5,7 +5,7 @@
 <h4>Events:</h4>
 <ul>
   <% @athlete.events.each do |event| %>
-  <li>Name: <%=event.name %> </li>
+  <li>Name: <a href="/events/<%= event.id  %>"><%=event.sport %> </li>
   <% end %>
 </ul>
 

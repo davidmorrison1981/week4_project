@@ -5,6 +5,7 @@ require('pg')
 require_relative('../db/sql_runner')
 require_relative('./nation.rb')
 require_relative('./event.rb')
+require( 'pry-byebug' )
 
 class Athlete
 
@@ -30,7 +31,7 @@ class Athlete
   end
 
   def events()
-    sql ="SELECT e.sport FROM events e INNER JOIN participation p ON e.id = p.event_id WHERE p.athlete_id = #{@id}"
+    sql ="SELECT * FROM events e INNER JOIN participation p ON e.id = p.event_id WHERE p.athlete_id = #{@id}"
     return Event.map_items(sql)
   end
 

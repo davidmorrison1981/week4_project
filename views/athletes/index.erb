@@ -3,7 +3,7 @@
 <br>
 <div>
 <% @athletes.each do |athlete| %>
-  <a href="/athletes/<%= athlete.id  %>">Name: <%= athlete.full_name %></a> Gender: <%= athlete.gender %><br><hr>
+  Name: <a href="/athletes/<%= athlete.id  %>"><%= athlete.full_name %></a>   Gender: <%= athlete.gender %><br><hr>
 <% end %>
 
 <a href="/athletes/new">Add new athlete</a><br>

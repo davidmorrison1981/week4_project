@@ -2,7 +2,7 @@
 <br>
 <div>
 <% @events.each do |event| %>
-  <a href="/events/<%= event.id  %>">Event: <%= %></a<br><hr>
+ Event: <a href="/events/<%= event.id  %>"> <%= event.sport%></a<br><hr>
 <% end %>
 
 <a href="/events/new">Add new event</a><br>

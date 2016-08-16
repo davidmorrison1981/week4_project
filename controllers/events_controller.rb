@@ -1,4 +1,5 @@
 require_relative('../models/event')
+require( 'pry-byebug' )
 
 #index
 get '/events' do

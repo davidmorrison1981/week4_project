@@ -36,8 +36,8 @@ class Event
   end
 
   def self.find(id)
-    sql = "SELECT * FROM events WHERE id = #{id}"
-    return Events.map_item(sql)
+    sql = "SELECT * FROM events WHERE id=#{id}"
+    return Event.map_item(sql)
   end
 
   def self.delete_all()
@@ -55,5 +55,12 @@ class Event
     result = Event.map_items(sql)
     return result.first
   end
+
+  def return_gold
+    sql= "SELECT a.* FROM athletes a INNER JOIN events e ON a.id = e.athlete_id WHERE .gold_id = #{@gold_id}"
+    gold_medal = Athlete.map_items(sql)
+    return gold_medal
+  end
+
 
 end
