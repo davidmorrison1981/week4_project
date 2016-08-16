@@ -16,4 +16,15 @@ class Participation
     @id = participation['id']
   end
 
+  def self.all()
+    sql = "SELECT * FROM participation"
+    self.map_items(sql)
+  end
+
+  def self.map_items(sql)
+    participations = SqlRunner.run(sql)
+    result = participations.map { |e| Participation.new( e ) }
+    return result
+  end
+
 end

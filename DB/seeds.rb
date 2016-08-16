@@ -105,10 +105,10 @@ participation3 = Participation.new({
 
 participation4 = Participation.new({
     'event_id' => event3.id,
-    'athlete_id' => athlete5.id, 
+    'athlete_id' => athlete1.id, 
 })
 
-participation4 = Participation.new({
+participation5 = Participation.new({
     'event_id' => event3.id,
     'athlete_id' => athlete3.id, 
 })
@@ -117,6 +117,7 @@ participation1.save
 participation2.save
 participation3.save
 participation4.save
+participation5.save
 
 binding.pry
 nil
