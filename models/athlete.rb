@@ -16,6 +16,7 @@ class Athlete
     @last_name = options['last_name']
     @gender = options['gender']
     @nation_id = options['nation_id'].to_i
+
   end
 
   def full_name()
@@ -29,7 +30,7 @@ class Athlete
   end
 
   def events()
-    sql ="SELECT e.name FROM events e INNER JOIN participation p ON e.id = p.event_id WHERE p.athlete_id = #{@id}"
+    sql ="SELECT e.sport FROM events e INNER JOIN participation p ON e.id = p.event_id WHERE p.athlete_id = #{@id}"
     return Event.map_items(sql)
   end
 
