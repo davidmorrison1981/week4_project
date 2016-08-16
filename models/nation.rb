@@ -23,8 +23,9 @@ class Nation
   end
 
   def athletes()
-    sql ="SELECT n.* FROM nations n INNER JOIN athletes a ON n.id = a.athlete_id WHERE n.nation_id = #{@id}" #this is wrong i think!
-    return Nation.map_items(sql)
+    # sql ="SELECT n.* FROM nations n INNER JOIN athletes a ON n.id = a.athlete_id WHERE n.nation_id = #{@id}" #this is wrong i think!
+    sql = "SELECT * FROM athletes WHERE nation_id=#{@id}"
+    return Athlete.map_items(sql)
   end
 
   def self.all()

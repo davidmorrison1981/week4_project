@@ -3,7 +3,7 @@
 <h1>Participating Nations:</h1>
 <br>
 <% @nations.each do |nation| %>
-  <a href="/nations/show<%= nation.id  %>"><%= nation.name %><br></a>
+  <a href="/nations/<%= nation.id  %>"><%= nation.name %><br></a>
 <% end %>
 <br>
 <br>

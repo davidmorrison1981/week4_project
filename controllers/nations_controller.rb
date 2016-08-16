@@ -1,4 +1,5 @@
 require_relative('../models/nation')
+require( 'pry-byebug' )
 
 #index
 get '/nations' do

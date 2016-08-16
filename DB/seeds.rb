@@ -10,34 +10,53 @@ Athlete.delete_all()
 Event.delete_all()
 Nation.delete_all()
 
+nation1 = Nation.new({
+    'name' => 'Great Britain'
+  })
+nation2 = Nation.new({
+    'name' => 'Jamaica'
+  })
+nation3 = Nation.new({
+    'name' => 'Uganda'
+  })
+
+nation1.save
+nation2.save
+nation3.save
+
 athlete1 = Athlete.new({ 
     'first_name' => 'Usian', 
     'last_name' => 'Bolt', 
-    'gender' => 'male'
+    'gender' => 'male',
+    'nation_id' => nation2.id
     })
 
 athlete2 = Athlete.new({ 
     'first_name' => 'Andrew', 
     'last_name' => 'Buchart', 
-    'gender' => 'male'
+    'gender' => 'male',
+    'nation_id' => nation1.id
     })
 
 athlete3 = Athlete.new({ 
     'first_name' => 'Adam', 
     'last_name' => 'Gemili', 
-    'gender' => 'male'
+    'gender' => 'male',
+    'nation_id' => nation1.id
     })
 
 athlete4 = Athlete.new({ 
     'first_name' => 'Andy', 
     'last_name' => 'Murray', 
-    'gender' => 'male'
+    'gender' => 'male',
+    'nation_id' => nation1.id
    })
 
 athlete5 = Athlete.new({ 
     'first_name' => 'Max', 
     'last_name' => 'Whitlock', 
-    'gender' => 'male'
+    'gender' => 'male',
+    'nation_id' => nation1.id
     })
 
 athlete1.save
@@ -97,20 +116,6 @@ event3.save
 # participation1.save
 # participation2.save
 # participation3.save
-
-nation1 = Nation.new({
-    'name' => 'Great Britain'
-  })
-nation2 = Nation.new({
-    'name' => 'Jamaica'
-  })
-nation3 = Nation.new({
-    'name' => 'Uganda'
-  })
-
-nation1.save
-nation2.save
-nation3.save
 
 binding.pry
 nil

@@ -15,14 +15,15 @@ class Athlete
     @first_name = options['first_name']
     @last_name = options['last_name']
     @gender = options['gender']
+    @nation_id = options['nation_id'].to_i
   end
 
-  def full_name(options)
+  def full_name()
     return @first_name.concat(" #{@last_name}")
   end
 
   def save()
-    sql = "INSERT INTO athletes (first_name, last_name) VALUES ('#{@first_name}', '#{@last_name}' ) RETURNING *"
+    sql = "INSERT INTO athletes (first_name, last_name, gender, nation_id) VALUES ('#{@first_name}', '#{@last_name}', '#{@gender}', '#{@nation_id}' ) RETURNING *"
     athlete = SqlRunner.run(sql).first
     @id = athlete['id']
   end

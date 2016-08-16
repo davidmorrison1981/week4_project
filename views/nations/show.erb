@@ -1,12 +1,12 @@
 <!-- html for the show nations page -->
 
 <div>
-<h1><%= @nations.name %></h1>
+<h1><%= @nation.name %></h1>
 
 <h4>Athletes:</h4>
 <ul>
-  <% @nations.athletes.each do |athlete| %>
-  <li>Name: <%=athlete.name %> </li>
+  <% @nation.athletes.each do |athlete| %>
+  <li>Name: <%=athlete.full_name %> </li>
   <% end %>
 </ul>
 

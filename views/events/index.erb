@@ -1,7 +1,8 @@
-<!-- html for the index page -->
+<h1>Events:</h1>
+<br>
 <div>
 <% @events.each do |event| %>
-  <a href="/events/<%= event.id  %>">Name: <%= athlete.fullname() %></a> Gender: <%= athlete.gender %><br><hr>
+  <a href="/events/show<%= event.id  %>">Event: <%= %></a<br><hr>
 <% end %>
 
 <a href="/events/new">Add new event</a><br>
