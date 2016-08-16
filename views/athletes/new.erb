@@ -1,16 +1,32 @@
 <!-- html for the new athlete page -->
 
-<h2>Add Athlete</h2>
+<h2>Add New Athlete</h2>
 
 <form action="/athletes" method="post">
 
   <label for="first_name">First Name:</label>
-  <input type="text" name="title"><br>
+  <input type="text" name="first_name"><br>
 
-  <label for="author">Author:</label>
-  <input type="text" name="author"><br>
+  <label for="last_name">Last Name:</label>
+  <input type="text" name="last_name">
+  <br>
+  <label for="gender">Gender:</label>
+  <select name="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+      <br>
 
-  <input type='submit' value="Add Book!">
+   <!--  <label for="nation">Country:</label>
+   
+    <select name="nation">
+      <% @nations.each do |nation| %>
+      <option value="<%=nation.id %>"> <%=nation.name %></option>
+      <% end %>
+    </select>
+        <br> -->
+
+  <input type='submit' value="Add Athlete!">
 </form>
 
 

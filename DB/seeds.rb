@@ -12,31 +12,31 @@ Nation.delete_all()
 
 athlete1 = Athlete.new({ 
     'first_name' => 'Usian', 
-    'lastname' => 'Bolt', 
+    'last_name' => 'Bolt', 
     'gender' => 'male'
     })
 
 athlete2 = Athlete.new({ 
     'first_name' => 'Andrew', 
-    'lastname' => 'Buchart', 
+    'last_name' => 'Buchart', 
     'gender' => 'male'
     })
 
 athlete3 = Athlete.new({ 
     'first_name' => 'Adam', 
-    'lastname' => 'Gemili', 
+    'last_name' => 'Gemili', 
     'gender' => 'male'
     })
 
 athlete4 = Athlete.new({ 
     'first_name' => 'Andy', 
-    'lastname' => 'Murray', 
+    'last_name' => 'Murray', 
     'gender' => 'male'
    })
 
 athlete5 = Athlete.new({ 
     'first_name' => 'Max', 
-    'lastname' => 'Whitlock', 
+    'last_name' => 'Whitlock', 
     'gender' => 'male'
     })
 

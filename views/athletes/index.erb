@@ -1,7 +1,9 @@
 <!-- html for the index page -->
+<h1>Participating Athletes:</h1>
+<br>
 <div>
 <% @athletes.each do |athlete| %>
-  <a href="/athletes/<%= athlete.id  %>">Name: <%= athlete.fullname() %></a> Gender: <%= athlete.gender %><br><hr>
+  <a href="/athletes/show<%= athlete.id  %>">Name: <%= athlete.full_name(options) %></a> Gender: <%= @options %><br><hr>
 <% end %>
 
 <a href="/athletes/new">Add new athlete</a><br>

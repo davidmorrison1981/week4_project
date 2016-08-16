@@ -51,7 +51,7 @@ class Athlete
   def self.map_items(sql)
     athlete = SqlRunner.run(sql)
     athlete = athlete.map { |a| Athlete.new( a ) }
-    return result
+    return athlete
   end
 
   def self.map_item(sql)

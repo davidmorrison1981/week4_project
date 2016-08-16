@@ -1,10 +1,14 @@
 <!-- html for the index page -->
 <div>
+<h1>Participating Nations:</h1>
+<br>
 <% @nations.each do |nation| %>
-  <a href="/nations/<%= nation.id  %>"><%= nation.name %></a>  
+  <a href="/nations/show<%= nation.id  %>"><%= nation.name %><br></a>
 <% end %>
-
+<br>
+<br>
 <a href="/nations/new">Add new country</a><br>
 </div>
-
+<br>
+<br>
 <a href="/">Back</a>
