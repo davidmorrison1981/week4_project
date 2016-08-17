@@ -11,8 +11,8 @@ get '/participation' do
 end
 
 #create
-post '/rentals' do
-  rental = Rental.new(params)
-  rental.save()
-  redirect(to('rentals'))
+post '/events' do
+  event = Event.new(params)
+  event.save()
+  redirect(to('/events'))
 end

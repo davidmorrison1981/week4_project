@@ -7,13 +7,21 @@
   <label for="Sport">Event:</label>
   <input type="text" name="name"><br>
 
-  <label for="">Event:</label>
+  <label for="gold_id">Gold Medal Winner:</label>
+ 
+   <select name="gold_id">
+     <% @athletes.each do |athlete| %>
+     <option value="<%=athlete.id %>"> <%=athlete.name %></option>
+     <% end %>
+   </select>
+
+
+
+
+  <label for="silver_id">Silver Medal Winner:</label>
   <input type="text" name="name"><br>
 
-  <label for="gold_id">Event:</label>
-  <input type="text" name="name"><br>
-
-  <label for="Sport">Event:</label>
+  <label for="bronze_id">Bronze Medal Winner:</label>
   <input type="text" name="name"><br>
 
   <input type='submit' value="Add Event!">

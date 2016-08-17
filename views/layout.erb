@@ -1,11 +1,26 @@
 <!-- html template page layout -->
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Rio 2016 Homepage</title>
+  <title>Rio 2016 Homepage</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-  <%= yield %>
+  <nav>
+    <div class="go_left">
+      <div class="logo">Rio 2016</div>
+    </div>
+    <div class="go_right">
+      <ul>
+        <li><a href="/nations">Nations</a></li>
+        <li><a href="/athletes">Athletes</a></li>
+        <li><a href="/events">Events</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>Olympics - Rio 2016 </footer>
 </body>
 </html>

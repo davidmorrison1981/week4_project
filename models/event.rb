@@ -17,6 +17,7 @@ class Event
     @gold_id = options['gold_id']
     @silver_id = options['silver_id']
     @bronze_id = options['bronze_id']
+    @athletes = options['athletes']
   end
 
   def save()
