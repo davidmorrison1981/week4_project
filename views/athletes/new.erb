@@ -10,6 +10,7 @@
   <label for="last_name">Last Name:</label>
   <input type="text" name="last_name">
   <br>
+
   <label for="gender">Gender:</label>
   <select name="gender">
     <option value="Male">Male</option>
@@ -17,14 +18,15 @@
   </select>
       <br>
 
-   <!--  <label for="nation">Country:</label>
+    <label for="nation_id">Country:</label>
    
-    <select name="nation">
+    <select name="nation_id">
       <% @nations.each do |nation| %>
       <option value="<%=nation.id %>"> <%=nation.name %></option>
+      
       <% end %>
     </select>
-        <br> -->
+        <br>
 
   <input type='submit' value="Add Athlete!">
 </form>

@@ -9,7 +9,7 @@ require( 'pry-byebug' )
 
 class Athlete
 
-  attr_reader :id, :first_name, :last_name, :gender
+  attr_reader :id, :first_name, :last_name, :gender, :nation_id
 
   def initialize(options)
     @id = options['id'].to_i
